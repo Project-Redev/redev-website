@@ -1,4 +1,3 @@
-import DiscordIcon from "@/components/icons/discord-icon";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -8,6 +7,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import Link from "next/link";
+import { FaDiscord } from "react-icons/fa6";
 
 export const CommunitySection = () => {
   return (
@@ -18,7 +18,7 @@ export const CommunitySection = () => {
           <Card className="bg-background border-none shadow-none text-center flex flex-col items-center justify-center">
             <CardHeader>
               <CardTitle className="text-4xl md:text-5xl font-bold flex flex-col items-center">
-                <DiscordIcon />
+                <FaDiscord />
                 <div>
                   Ready to join this
                   <span className="text-transparent pl-2 bg-gradient-to-r from-[#D247BF] to-primary bg-clip-text">

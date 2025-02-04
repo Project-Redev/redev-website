@@ -1,15 +1,15 @@
 "use client";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { FaArrowRight } from "react-icons/fa6";
 
 export const HeroSection = () => {
   const { theme } = useTheme();
-  const [size, setSize] = useState({ width: 400, height: 200 });
+  const [size, setSize] = useState({ width: 300, height: 150 });
 
   useEffect(() => {
     function updateSize() {
@@ -17,8 +17,10 @@ export const HeroSection = () => {
         setSize({ width: 850, height: 550 });
       } else if (window.innerWidth >= 768) {
         setSize({ width: 600, height: 300 });
-      } else {
+      } else if (window.innerWidth >= 640) {
         setSize({ width: 400, height: 200 });
+      } else {
+        setSize({ width: 300, height: 150 });
       }
     }
 
@@ -35,7 +37,7 @@ export const HeroSection = () => {
             <span className="mr-2 text-primary">
               <Badge>New</Badge>
             </span>
-            <span> Design is out now! </span>
+            <span> Nether update is out! </span>
           </Badge>
 
           <div className="max-w-screen-md mx-auto text-center text-4xl md:text-6xl font-bold">
@@ -48,14 +50,14 @@ export const HeroSection = () => {
           </div>
 
           <p className="max-w-screen-sm mx-auto text-xl text-muted-foreground">
-            {`We're more than just a tool, we're a community of passionate
-            creators. Get access to exclusive resources, tutorials, and support.`}
+            Project ReDev aims to reshape Minecraft into the creative and
+            challenging sandbox adventure it should be.
           </p>
 
           <div className="space-y-4 md:space-y-0 md:space-x-4">
             <Button className="w-5/6 md:w-1/4 font-bold group/arrow">
               Download!
-              <ArrowRight className="size-5 ml-2 group-hover/arrow:translate-x-1 transition-transform" />
+              <FaArrowRight className="size-5 ml-2 group-hover/arrow:translate-x-1 transition-transform" />
             </Button>
 
             <Button

@@ -5,7 +5,6 @@ import { FeaturesSection } from "@/components/layout/sections/features";
 import { FooterSection } from "@/components/layout/sections/footer";
 import { HeroSection } from "@/components/layout/sections/hero";
 import { ServicesSection } from "@/components/layout/sections/services";
-import { TeamSection } from "@/components/layout/sections/team";
 
 export const metadata = {
   title: "Shadcn - Landing template",
@@ -41,7 +40,6 @@ export default function Home() {
       <HeroSection />
       <FeaturesSection />
       <ServicesSection />
-      <TeamSection />
       <CommunitySection />
       <ContactSection />
       <FAQSection />

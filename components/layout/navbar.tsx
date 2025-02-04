@@ -1,9 +1,10 @@
 "use client";
 import { Logo } from "@/components/atoms/logo";
-import { ChevronsDown, Github, Menu } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import { FaBurger, FaDiscord, FaGithub } from "react-icons/fa6";
+import { RxHamburgerMenu } from "react-icons/rx";
 import { Button } from "../ui/button";
 import {
   NavigationMenu,
@@ -58,9 +59,9 @@ export const Navbar = () => {
       <div className="flex items-center lg:hidden">
         <Sheet open={isOpen} onOpenChange={setIsOpen}>
           <SheetTrigger asChild>
-            <Menu
+            <RxHamburgerMenu
               onClick={() => setIsOpen(!isOpen)}
-              className="cursor-pointer lg:hidden"
+              className="cursor-pointer lg:hidden ml-2"
             />
           </SheetTrigger>
 
@@ -120,10 +121,20 @@ export const Navbar = () => {
         <Button asChild size="sm" variant="ghost" aria-label="View on GitHub">
           <Link
             aria-label="View on GitHub"
-            href="https://github.com/nobruf/shadcn-landing-page.git"
+            href="https://github.com/MikulDev/ProjectReDev"
             target="_blank"
           >
-            <Github className="size-5" />
+            <FaGithub className="size-5" />
+          </Link>
+        </Button>
+
+        <Button asChild size="sm" variant="ghost" aria-label="Join Discord">
+          <Link
+            aria-label={"Join our Discord"}
+            href={"https://discord.gg/skNs9QPAe2"}
+            target={"_blank"}
+          >
+            <FaDiscord className={"size-5"} />
           </Link>
         </Button>
       </div>
