@@ -40,9 +40,9 @@ export const HeroSection = () => {
             <span> Nether update is out! </span>
           </Badge>
 
-          <div className="max-w-screen-md mx-auto text-center text-4xl md:text-6xl font-bold">
+          <div className="max-w-screen-md mx-auto text-center text-3xl md:text-5xl">
             <h1>
-              Re-experience minecraft with
+              Re-experience Minecraft with
               <span className="text-transparent px-2 bg-gradient-to-r from-[#D247BF] to-primary bg-clip-text">
                 ReDev
               </span>

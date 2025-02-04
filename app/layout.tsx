@@ -1,11 +1,19 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import {
+  Inter,
+  Press_Start_2P,
+  Roboto,
+  Roboto_Condensed,
+  VT323,
+} from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/layout/navbar";
 import { ThemeProvider } from "@/components/layout/theme-provider";
 import { cn } from "@/lib/utils";
+import localFont from "next/font/local";
 import type React from "react";
-const inter = Inter({ subsets: ["latin"] });
+
+const inter = localFont({ src: "./mc.otf" });
 
 export const metadata: Metadata = {
   title: "Shadcn - Landing template",

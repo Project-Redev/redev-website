@@ -68,7 +68,7 @@ export const FooterSection = () => {
 
             <div>
               <Link href="#" className="opacity-60 hover:opacity-100">
-                Dribbble
+                Youtube
               </Link>
             </div>
           </div>
