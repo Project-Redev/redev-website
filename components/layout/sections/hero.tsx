@@ -21,11 +21,10 @@ export const HeroSection = () => {
 
           <div className="max-w-screen-md mx-auto text-center text-4xl md:text-6xl font-bold">
             <h1>
-              Experience the
+              Re-experience minecraft with
               <span className="text-transparent px-2 bg-gradient-to-r from-[#D247BF] to-primary bg-clip-text">
-                Shadcn
+                ReDev
               </span>
-              landing page
             </h1>
           </div>
 
@@ -36,7 +35,7 @@ export const HeroSection = () => {
 
           <div className="space-y-4 md:space-y-0 md:space-x-4">
             <Button className="w-5/6 md:w-1/4 font-bold group/arrow">
-              Get Started
+              Download!
               <ArrowRight className="size-5 ml-2 group-hover/arrow:translate-x-1 transition-transform" />
             </Button>
 
@@ -46,10 +45,10 @@ export const HeroSection = () => {
               className="w-5/6 md:w-1/4 font-bold"
             >
               <Link
-                href="https://github.com/nobruf/shadcn-landing-page.git"
+                href={"/wiki"}
                 target="_blank"
               >
-                Github respository
+                Go to the wiki!
               </Link>
             </Button>
           </div>
