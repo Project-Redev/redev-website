@@ -77,7 +77,7 @@ export const FooterSection = () => {
         <Separator className="my-6" />
         <section className="">
           <h3 className="">
-            &copy; {new Date().getFullYear()} Designed and developed by
+            &copy; {new Date().getFullYear()} Developed by
             <Link
               target="_blank"
               href="https://github.com/malezjaa"
