@@ -43,7 +43,7 @@ export const HeroSection = () => {
         }}
         className="relative flex flex-col gap-4 items-center justify-center px-4"
       >
-        <section className="container w-full mt-[13rem]">
+        <section className="container w-full mt-[20rem]">
           <div className="grid place-items-center lg:max-w-screen-xl gap-8 mx-auto py-20 md:py-32">
             <div className="text-center space-y-8">
               <Badge variant="outline" className="text-sm py-2">
