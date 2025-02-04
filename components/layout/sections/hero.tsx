@@ -5,9 +5,28 @@ import { ArrowRight } from "lucide-react";
 import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 export const HeroSection = () => {
   const { theme } = useTheme();
+  const [size, setSize] = useState({ width: 400, height: 200 });
+
+  useEffect(() => {
+    function updateSize() {
+      if (window.innerWidth >= 1024) {
+        setSize({ width: 850, height: 550 });
+      } else if (window.innerWidth >= 768) {
+        setSize({ width: 600, height: 300 });
+      } else {
+        setSize({ width: 400, height: 200 });
+      }
+    }
+
+    updateSize();
+    window.addEventListener("resize", updateSize);
+    return () => window.removeEventListener("resize", updateSize);
+  }, []);
+
   return (
     <section className="container w-full">
       <div className="grid place-items-center lg:max-w-screen-xl gap-8 mx-auto py-20 md:py-32">
@@ -52,20 +71,23 @@ export const HeroSection = () => {
         </div>
 
         <div className="relative group mt-14">
-          <div className="absolute top-2 lg:-top-8 left-1/2 transform -translate-x-1/2 w-[90%] mx-auto h-24 lg:h-80 bg-primary/50 rounded-full blur-3xl"></div>
-          <iframe
-            width="900"
-            height="650"
-            src="https://www.youtube.com/embed/QuryJC0U8cM?si=ksevBlZ_r-2BgBA2"
-            title="YouTube video player"
-            frameBorder="0"
-            className="w-full md:w-[1200px] mx-auto rounded-lg relative rouded-lg leading-none flex items-center border border-t-2 border-secondary  border-t-primary/30"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
-          ></iframe>
+          <div className="relative group mt-14">
+            <div className="absolute top-2 lg:-top-8 left-1/2 transform -translate-x-1/2 w-[90%] mx-auto h-24 lg:h-80 bg-primary/50 rounded-full blur-3xl pointer-events-none" />
 
-          <div className="absolute bottom-0 left-0 w-full h-20 md:h-28 bg-gradient-to-b from-background/0 via-background/50 to-background rounded-lg"></div>
+            <iframe
+              src="https://www.youtube.com/embed/QuryJC0U8cM?si=ksevBlZ_r-2BgBA2"
+              title="YouTube video player"
+              frameBorder="0"
+              width={size.width}
+              height={size.height}
+              className="mx-auto rounded-lg border border-secondary border-t-primary/30 relative"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            />
+
+            <div className="absolute bottom-0 left-0 w-full h-20 md:h-28 bg-gradient-to-b from-background/0 via-background/50 to-background rounded-lg pointer-events-none" />
+          </div>
         </div>
       </div>
     </section>
