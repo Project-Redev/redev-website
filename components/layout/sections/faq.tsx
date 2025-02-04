@@ -4,42 +4,100 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import Link from "next/link";
+import type React from "react";
 
 interface FAQProps {
   question: string;
-  answer: string;
+  answer: React.ReactNode;
   value: string;
 }
 
 const FAQList: FAQProps[] = [
   {
-    question: "Is this template free?",
-    answer: "Yes. It is a free NextJS Shadcn template.",
+    question: "Will there be an official [minecraft version] port for the mod?",
+    answer: (
+      <div>
+        <p>
+          We don’t have plans to officially support a backport for the mod. The
+          primary goal of ReDev is to stay aligned with the latest Vanilla
+          features, and backporting would require significant effort that could
+          detract from this focus.
+        </p>
+        <br />
+        <p>
+          However, we’re open to leaving the door open for the community to
+          explore a backport independently if there’s enough interest. While we
+          won’t be able to provide direct support for such efforts, we’d love to
+          see what creative solutions the community comes up with!
+        </p>
+      </div>
+    ),
     value: "item-1",
   },
   {
-    question: "Duis aute irure dolor in reprehenderit in voluptate velit?",
-    answer:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint labore quidem quam consectetur sapiente, iste rerum reiciendis animi nihil nostrum sit quo, modi quod.",
+    question: "Does this mod support Bedrock edition?",
+    answer: (
+      <div>
+        <p>
+          No, this mod does not support Bedrock Edition. It is exclusively
+          designed for the Java Edition of Minecraft, running on NeoForge.
+        </p>
+        <br />
+        <p>
+          Porting to Bedrock Edition would be extremely challenging due to
+          significant differences between the two editions, such as how they
+          handle modding, game mechanics, and code structure.
+        </p>
+      </div>
+    ),
     value: "item-2",
   },
   {
-    question:
-      "Lorem ipsum dolor sit amet Consectetur natus dolor minus quibusdam?",
-    answer:
-      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore qui nostrum reiciendis veritatis.",
+    question: "Which version of Minecraft does the mod support?",
+    answer: (
+      <>
+        <p>
+          The mod is always kept up to date with the latest version of
+          Minecraft, ensuring compatibility with the newest features and
+          updates. Currently, it runs on the latest release of Minecraft using
+          NeoForge as the modding platform.
+        </p>
+        <div className="mt-4">
+          <p>
+            NeoForge can be downloaded from
+            <Link
+              href="https://neoforged.net/"
+              className="text-primary hover:underline"
+            >
+              {" "}
+              here
+            </Link>
+            .
+          </p>
+          <p>While the mod can be downloaded from:</p>
+          <ul className="list-disc list-inside">
+            <li>
+              <Link
+                href="https://modrinth.com/mod/project-redev"
+                className="text-primary hover:underline"
+              >
+                Modrinth
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="https://www.curseforge.com/minecraft/mc-mods/project-redev"
+                className="text-primary hover:underline"
+              >
+                CurseForge
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </>
+    ),
     value: "item-3",
-  },
-  {
-    question: "Excepteur sint occaecat cupidata non proident sunt?",
-    answer: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
-    value: "item-4",
-  },
-  {
-    question:
-      "Enim ad minim veniam, quis nostrud exercitation ullamco laboris?",
-    answer: "consectetur adipisicing elit. Sint labore.",
-    value: "item-5",
   },
 ];
 

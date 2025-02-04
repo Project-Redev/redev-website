@@ -7,6 +7,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import Link from "next/link";
 
 export const CommunitySection = () => {
   return (
@@ -27,15 +28,15 @@ export const CommunitySection = () => {
               </CardTitle>
             </CardHeader>
             <CardContent className="lg:w-[80%] text-xl text-muted-foreground">
-              Join our vibrant Discord community! Connect, share, and grow with
-              like-minded enthusiasts. Click to dive in! 🚀
+              Join our Discord community! Connect, share, and grow with
+              Minecraft enthusiasts. Click to dive in! 🚀
             </CardContent>
 
             <CardFooter>
               <Button asChild>
-                <a href="https://discord.com/" target="_blank">
+                <Link href="https://discord.gg/skNs9QPAe2" target="_blank">
                   Join Discord
-                </a>
+                </Link>
               </Button>
             </CardFooter>
           </Card>
