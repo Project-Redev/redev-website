@@ -27,7 +27,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cn("min-h-screen bg-background", inter.className)}>
+      <body
+        className={cn(
+          "min-h-screen bg-background flex flex-col",
+          inter.className,
+        )}
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

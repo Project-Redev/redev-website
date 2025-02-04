@@ -15,18 +15,17 @@ export const AuroraBackground = ({
   ...props
 }: AuroraBackgroundProps) => {
   return (
-    <main>
-      <div
-        className={cn(
-          "relative flex flex-col h-[100vh] items-center justify-center transition-bg",
-          className,
-        )}
-        {...props}
-      >
-        <div className="absolute inset-0 overflow-hidden">
-          <div
-            className={cn(
-              `
+    <div
+      className={cn(
+        "relative flex flex-col items-center justify-center transition-bg",
+        className,
+      )}
+      {...props}
+    >
+      <div className="absolute inset-0 overflow-hidden">
+        <div
+          className={cn(
+            `
             [--purple-gradient:repeating-linear-gradient(100deg,var(--purple-500)_0%,var(--purple-500)_7%,var(--transparent)_10%,var(--transparent)_12%,var(--purple-500)_16%)]
             [--dark-gradient:repeating-linear-gradient(100deg,var(--black)_0%,var(--black)_7%,var(--transparent)_10%,var(--transparent)_12%,var(--black)_16%)]
             [--aurora:repeating-linear-gradient(100deg,var(--purple-700)_10%,var(--indigo-500)_15%,var(--purple-500)_20%,var(--violet-400)_25%,var(--purple-600)_30%)]
@@ -41,13 +40,12 @@ export const AuroraBackground = ({
             after:animate-aurora after:[background-attachment:fixed] after:mix-blend-difference
             pointer-events-none
             absolute -inset-[10px] opacity-50 will-change-transform`,
-              showRadialGradient &&
-                "[mask-image:radial-gradient(ellipse_at_100%_0%,black_10%,var(--transparent)_70%)]",
-            )}
-          />
-        </div>
-        {children}
+            showRadialGradient &&
+              "[mask-image:radial-gradient(ellipse_at_100%_0%,black_10%,var(--transparent)_70%)]",
+          )}
+        />
       </div>
-    </main>
+      {children}
+    </div>
   );
 };
