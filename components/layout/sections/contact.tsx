@@ -72,7 +72,6 @@ export const ContactSection = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
             ipsam sint enim exercitationem ex autem corrupti quas tenetur
           </p>
-
         </div>
 
         <Card className="bg-muted/60 dark:bg-card">
