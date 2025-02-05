@@ -12,6 +12,7 @@ export const metadata = {
     default: "Project ReDev",
     template: "%s | Project ReDev",
   },
+  metadataBase: new URL(getBaseUrl()),
   description:
     "Project ReDev aims to reshape Minecraft into the creative and challenging sandbox adventure it should be.",
   openGraph: {

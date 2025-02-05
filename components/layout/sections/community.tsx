@@ -6,6 +6,7 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { DISCORD_INVITE } from "@/lib/socials";
 import Link from "next/link";
 import { FaDiscord } from "react-icons/fa6";
 
@@ -34,7 +35,7 @@ export const CommunitySection = () => {
 
             <CardFooter>
               <Button asChild>
-                <Link href="https://discord.gg/skNs9QPAe2" target="_blank">
+                <Link href={DISCORD_INVITE} target="_blank">
                   Join Discord
                 </Link>
               </Button>

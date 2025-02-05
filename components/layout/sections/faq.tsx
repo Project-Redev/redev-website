@@ -69,6 +69,7 @@ const FAQList: FAQProps[] = [
             <Link
               href="https://neoforged.net/"
               className="text-primary hover:underline"
+              target={"_blank"}
             >
               {" "}
               here
@@ -81,6 +82,7 @@ const FAQList: FAQProps[] = [
               <Link
                 href="https://modrinth.com/mod/project-redev"
                 className="text-primary hover:underline"
+                target="_blank"
               >
                 Modrinth
               </Link>
@@ -89,6 +91,7 @@ const FAQList: FAQProps[] = [
               <Link
                 href="https://www.curseforge.com/minecraft/mc-mods/project-redev"
                 className="text-primary hover:underline"
+                target={"_blank"}
               >
                 CurseForge
               </Link>

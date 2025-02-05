@@ -1,5 +1,6 @@
 import { Logo } from "@/components/atoms/logo";
 import { Separator } from "@/components/ui/separator";
+import { DISCORD_INVITE, YOUTUBE_CHANNEL } from "@/lib/socials";
 import Link from "next/link";
 
 export const FooterSection = () => {
@@ -10,24 +11,29 @@ export const FooterSection = () => {
           <Logo />
 
           <div className="flex flex-col gap-2">
-            <h3 className="font-bold text-lg">Contact</h3>
+            <h3 className="font-bold text-lg">Wiki</h3>
             <div>
-              <Link href="#" className="opacity-60 hover:opacity-100">
-                Github
+              <Link
+                href="/wiki/getting-started"
+                className="opacity-60 hover:opacity-100"
+              >
+                Getting Started
               </Link>
             </div>
 
             <div>
-              <Link href="#" className="opacity-60 hover:opacity-100">
-                Twitter
+              <Link
+                href="/wiki/installation"
+                className="opacity-60 hover:opacity-100"
+              >
+                Installation
               </Link>
             </div>
 
-            <div>
-              <Link href="#" className="opacity-60 hover:opacity-100">
-                Instagram
-              </Link>
-            </div>
+            {/*<div>*/}
+            {/*  <Link href="#" className="opacity-60 hover:opacity-100">*/}
+            {/*  </Link>*/}
+            {/*</div>*/}
           </div>
 
           <div className="flex flex-col gap-2">
@@ -44,29 +50,37 @@ export const FooterSection = () => {
               </Link>
             </div>
 
-            <div>
-              <Link href="#" className="opacity-60 hover:opacity-100">
-                Feedback
-              </Link>
-            </div>
+            {/*<div>*/}
+            {/*  <Link href="#" className="opacity-60 hover:opacity-100">*/}
+            {/*    Feedback*/}
+            {/*  </Link>*/}
+            {/*</div>*/}
           </div>
 
           <div className="flex flex-col gap-2">
             <h3 className="font-bold text-lg">Socials</h3>
             <div>
               <Link href="#" className="opacity-60 hover:opacity-100">
-                Twitch
+                GitHub
               </Link>
             </div>
 
             <div>
-              <Link href="#" className="opacity-60 hover:opacity-100">
+              <Link
+                href={DISCORD_INVITE}
+                target={"_blank"}
+                className="opacity-60 hover:opacity-100"
+              >
                 Discord
               </Link>
             </div>
 
             <div>
-              <Link href="#" className="opacity-60 hover:opacity-100">
+              <Link
+                href={YOUTUBE_CHANNEL}
+                target={"_blank"}
+                className="opacity-60 hover:opacity-100"
+              >
                 Youtube
               </Link>
             </div>

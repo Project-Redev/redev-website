@@ -1,5 +1,6 @@
 "use client";
 import { Logo } from "@/components/atoms/logo";
+import { DISCORD_INVITE } from "@/lib/socials";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -134,7 +135,7 @@ export const Navbar = () => {
         <Button asChild size="sm" variant="ghost" aria-label="Join Discord">
           <Link
             aria-label={"Join our Discord"}
-            href={"https://discord.gg/skNs9QPAe2"}
+            href={DISCORD_INVITE}
             target={"_blank"}
           >
             <FaDiscord className={"size-5"} />
