@@ -16,8 +16,12 @@ import type React from "react";
 const inter = localFont({ src: "./mc.otf" });
 
 export const metadata: Metadata = {
-  title: "Shadcn - Landing template",
-  description: "Landing template from Shadcn",
+  title: {
+    default: "Project ReDev",
+    template: "%s | Project ReDev",
+  },
+  description:
+    "Project ReDev aims to reshape Minecraft into the creative and challenging sandbox adventure it should be.",
 };
 
 export default function RootLayout({
