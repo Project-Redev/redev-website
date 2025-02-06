@@ -1,4 +1,5 @@
 "use client";
+import { ToggleTheme } from "@/components/layout/toogle-theme";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -23,8 +24,12 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
+import { DISCORD_INVITE } from "@/lib/socials";
 import { zodResolver } from "@hookform/resolvers/zod";
+import Link from "next/link";
+import React from "react";
 import { useForm } from "react-hook-form";
+import { FaDiscord, FaGithub } from "react-icons/fa6";
 import { z } from "zod";
 
 const formSchema = z.object({
@@ -68,9 +73,37 @@ export const ContactSection = () => {
             <h2 className="text-3xl md:text-4xl font-bold">Connect With Us</h2>
           </div>
           <p className="mb-8 text-muted-foreground lg:w-5/6">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum
-            ipsam sint enim exercitationem ex autem corrupti quas tenetur
+            WWe would love to hear from you! If you prefer not to use social
+            media, feel free to send us a message directly or connect with us
+            using the links below.
           </p>
+
+          <div className="hidden lg:flex">
+            <Button
+              asChild
+              size="sm"
+              variant="ghost"
+              aria-label="View on GitHub"
+            >
+              <Link
+                aria-label="View on GitHub"
+                href="https://github.com/MikulDev/ProjectReDev"
+                target="_blank"
+              >
+                <FaGithub className="size-5" />
+              </Link>
+            </Button>
+
+            <Button asChild size="sm" variant="ghost" aria-label="Join Discord">
+              <Link
+                aria-label={"Join our Discord"}
+                href={DISCORD_INVITE}
+                target={"_blank"}
+              >
+                <FaDiscord className={"size-5"} />
+              </Link>
+            </Button>
+          </div>
         </div>
 
         <Card className="bg-muted/60 dark:bg-card">
