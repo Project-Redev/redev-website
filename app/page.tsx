@@ -1,10 +1,8 @@
 import { CommunitySection } from "@/components/layout/sections/community";
 import { ContactSection } from "@/components/layout/sections/contact";
 import { FAQSection } from "@/components/layout/sections/faq";
-import { FeaturesSection } from "@/components/layout/sections/features";
 import { FooterSection } from "@/components/layout/sections/footer";
 import { HeroSection } from "@/components/layout/sections/hero";
-import { ServicesSection } from "@/components/layout/sections/services";
 import { getBaseUrl } from "@/lib/utils";
 
 export const metadata = {
@@ -50,8 +48,6 @@ export default function Home() {
   return (
     <>
       <HeroSection />
-      <FeaturesSection />
-      <ServicesSection />
       <CommunitySection />
       <ContactSection />
       <FAQSection />
