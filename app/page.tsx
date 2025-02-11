@@ -3,6 +3,7 @@ import { ContactSection } from "@/components/layout/sections/contact";
 import { FAQSection } from "@/components/layout/sections/faq";
 import { FooterSection } from "@/components/layout/sections/footer";
 import { HeroSection } from "@/components/layout/sections/hero";
+import { TeamSection } from "@/components/layout/sections/team";
 import { getBaseUrl } from "@/lib/utils";
 
 export const metadata = {
@@ -48,6 +49,7 @@ export default function Home() {
   return (
     <>
       <HeroSection />
+      <TeamSection />
       <CommunitySection />
       <ContactSection />
       <FAQSection />

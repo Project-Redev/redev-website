@@ -18,6 +18,12 @@ const nextConfig = {
         protocol: "https",
         hostname: "avatars.githubusercontent.com",
       },
+      {
+        protocol: "https",
+        hostname: "mc-heads.net",
+      },
+      { protocol: "https", hostname: "minotar.net" },
+      { protocol: "https", hostname: "starlightskins.lunareclipse.studio" },
     ],
   },
 };
